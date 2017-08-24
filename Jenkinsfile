@@ -1,11 +1,21 @@
 node {
     stage("clone repo"){
-        echo "Hello World"
+        echo "clone repo starts"
+        checkout scm
+        sh 'git submodule update --init --recursive'
     }
 
+    stage("compile"){
+        echo "compiling starts"
 
-    stage("build"){
-        echo "hi"
     }
-    
+
+    stage("build docker"){
+        echo "building docker"
+    }
+
+    stage("pushing to ecs"){
+
+    }
+
 }
