@@ -1,11 +1,19 @@
 node {
     stage("clone repo"){
-        echo "Hello World"
+        echo "clone repo"
+        checkout scm
     }
 
+    stage("compile"){
+        echo "compiling the source code"
+    }
 
-    stage("build"){
-        echo "hi"
+    stage("build docker"){
+        echo "building docker"
+    }
+
+    stage("deploy"){
+        echo "deploying to aws"
     }
     
 }
