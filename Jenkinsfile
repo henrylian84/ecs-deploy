@@ -6,6 +6,7 @@ node {
 
     stage("compile"){
         echo "compiling the source code"
+        sh 'gradlew build'
     }
 
     stage("build docker"){
