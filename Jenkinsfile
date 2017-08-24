@@ -14,7 +14,7 @@ node {
     }
 
     stage("deploy"){
-        echo "deploying to aws"
+        echo "deploying to aws_ass"
     }
     
 }
