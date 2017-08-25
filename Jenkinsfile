@@ -1,12 +1,9 @@
 node {
-    stage("clone repo"){
-        echo "clone repo"
-        checkout scm
-    }
+
 
     stage("compile"){
         echo "compiling the source code"
-        sh 'gradlew build'
+        sh './gradlew clean build'
     }
 
     stage("build docker"){
