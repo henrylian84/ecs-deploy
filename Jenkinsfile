@@ -11,7 +11,7 @@ node {
 
     stage("build docker"){
         echo "building docker"
-        def app = docker.build("henrylian/springbootdemo:${env.BUILD_NUMBER}","deploy")
+        def app = docker.build("henrylian/springbootdemo:${env.BUILD_NUMBER})
         app.push 'latest'
     }
 
