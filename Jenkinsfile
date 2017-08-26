@@ -16,7 +16,7 @@ node {
     stage("build docker"){
         echo "building docker"
         def app = docker.build("henrylian/springbootdemo:${env.BUILD_NUMBER}")
-        sh 'docker login'
+
         docker.withRegistry("https://registry.hub.docker.com", 'docker-registry-login', null)
         app.push()
     }
